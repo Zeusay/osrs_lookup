@@ -24,7 +24,7 @@
             android:maxLines="@integer/material_motion_duration_long_1"
             android:text="@string/hiscores_lookup"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,6 +32,7 @@
             android:id="@+id/player_search_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
             android:src="@drawable/ic_baseline_person_search_24"
             app:layout_constraintBottom_toBottomOf="@+id/player_name"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,43 +57,59 @@
                 android:layout_marginTop="32dp"
                 android:gravity="center"
                 android:maxLength="12"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:maxLines="@integer/material_motion_duration_medium_1"
                 android:textAppearance="@android:style/TextAppearance.Material.Large" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <RadioGroup
-            android:id="@+id/tip_options"
-            android:layout_width="match_parent"
+            android:id="@+id/gamemodes"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:checkedButton="@id/option_twenty_percent"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/player_name">
+            app:layout_constraintEnd_toEndOf="@id/player_name"
+            app:layout_constraintStart_toStartOf="@+id/player_name"
+            app:layout_constraintTop_toBottomOf="@+id/player_name">
 
             <RadioButton
-                android:id="@+id/option_twenty_percent"
+                android:id="@+id/gm_iron"
                 style="@android:style/TextAppearance.Material.Large"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ironman" />
+                android:drawableStart="@drawable/iron_ic"
+                android:drawablePadding="8dp"
+                android:textColor="@color/white"
+                android:drawableTint="@color/iron_grey"
+                android:text="@string/ironman" />
 
             <RadioButton
-                android:id="@+id/option_eighteen_percent"
+                android:id="@+id/gm_hardcore"
                 style="@android:style/TextAppearance.Material.Large"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Hardcore Ironman" />
-
-            <RadioButton
-                android:id="@+id/option_fifteen_percent"
-                style="@android:style/TextAppearance.Material.Large"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Ultimate Ironman" />
+                android:drawableStart="@drawable/iron_ic"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/iron_red"
+                android:textColor="@color/white"
+                android:text="@string/hardcore_ironman" />
+            />
+
+            <RadioButton
+                android:id="@+id/gm_ultimate"
+                style="@android:style/TextAppearance.Material.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/iron_ic"
+                android:drawablePadding="8dp"
+                android:textColor="@color/white"
+                android:drawableTint="@color/iron_white"
+                android:text="@string/ultimate_ironman" />
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

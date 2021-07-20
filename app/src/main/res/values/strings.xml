@@ -4,4 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hiscores_lookup">Hiscores Lookup</string>
     <string name="player_name">Player Name</string>
+    <string name="ironman">Ironman</string>
+    <string name="hardcore_ironman">Hardcore Ironman</string>
+    <string name="ultimate_ironman">Ultimate Ironman</string>
 </resources>
