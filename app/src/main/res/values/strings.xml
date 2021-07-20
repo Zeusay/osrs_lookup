@@ -7,4 +7,5 @@
     <string name="ironman">Ironman</string>
     <string name="hardcore_ironman">Hardcore Ironman</string>
     <string name="ultimate_ironman">Ultimate Ironman</string>
+    <string name="standard">Standard</string>
 </resources>
