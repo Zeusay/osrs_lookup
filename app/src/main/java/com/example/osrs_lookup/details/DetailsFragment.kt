@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.example.osrs_lookup.R
 import com.example.osrs_lookup.databinding.DetailsFragmentBinding
 import com.google.android.material.snackbar.Snackbar
@@ -17,6 +19,7 @@ class DetailsFragment : Fragment() {
     private val viewModel: DetailsViewModel by viewModels()
     private lateinit var binding: DetailsFragmentBinding
     private var gameMode: String = "Standard"
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,6 +64,8 @@ class DetailsFragment : Fragment() {
             }
             Log.d(TAG, "playerName found was: $playerName")
             Log.d(TAG, "playerMode found was: $gameMode")
+            val action = DetailsFragmentDirections.actionDetailsToResults()
+            NavHostFragment.findNavController(this).navigate(action)
 
         } else {
             Log.d(TAG, "Invalid Player Name")

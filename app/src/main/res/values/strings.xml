@@ -8,4 +8,6 @@
     <string name="hardcore_ironman">Hardcore Ironman</string>
     <string name="ultimate_ironman">Ultimate Ironman</string>
     <string name="standard">Standard</string>
+    <string name="player_details">Player Details</string>
+    <string name="player_stats">Player Stats</string>
 </resources>
