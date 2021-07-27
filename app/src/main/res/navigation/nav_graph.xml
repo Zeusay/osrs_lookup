@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.osrs_lookup.details.DetailsFragment"
-        android:label="Player Lookup"
+        android:label="@string/player_details"
         tools:layout="@layout/details_fragment">
         <action
             android:id="@+id/action_details_to_results"
@@ -17,6 +17,6 @@
     <fragment
         android:id="@+id/resultsFragment"
         android:name="com.example.osrs_lookup.details.ResultsFragment"
-        android:label="Player's Stats"
+        android:label="@string/player_stats"
         tools:layout="@layout/results_fragment"/>
 </navigation>

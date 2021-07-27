@@ -18,10 +18,11 @@
 
         <TextView
             android:id="@+id/textView"
-            style="@android:style/TextAppearance.Material.Large"
+            style="@android:style/TextAppearance.Material.Display2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/player_name"
+            android:textColor="@color/white"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

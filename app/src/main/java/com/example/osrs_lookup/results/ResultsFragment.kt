@@ -1,5 +1,6 @@
 package com.example.osrs_lookup.details
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +16,11 @@ class ResultsFragment : Fragment() {
 
     private val viewModel: ResultsViewModel by viewModels()
     private lateinit var binding: ResultsFragmentBinding
+
+    override fun onAttach(context: Context) {
+        activity?.title = "Player Stats"
+        super.onAttach(context)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

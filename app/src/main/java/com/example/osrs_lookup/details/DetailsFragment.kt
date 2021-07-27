@@ -1,5 +1,6 @@
 package com.example.osrs_lookup.details
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -20,6 +21,10 @@ class DetailsFragment : Fragment() {
     private lateinit var binding: DetailsFragmentBinding
     private var gameMode: String = "Standard"
 
+    override fun onAttach(context: Context) {
+        activity?.title = "Player Details"
+        super.onAttach(context)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,6 +67,7 @@ class DetailsFragment : Fragment() {
                     "Standard"
                 }
             }
+            viewModel.detailsPass(playerName,gameMode)
             Log.d(TAG, "playerName found was: $playerName")
             Log.d(TAG, "playerMode found was: $gameMode")
             val action = DetailsFragmentDirections.actionDetailsToResults()
